@@ -13,6 +13,13 @@ class HomeController < ApplicationController
 				#~ @doctors = File.open("#{Rails.root}/public/education.csv") 
 				send_file("#{Rails.root}/public/doctors.csv" )
  
+		end				
+		
+		def elibrary
+				#~ @doctors = CSV.Read(File.path("/education.csv"))
+				#~ @doctors = File.open("#{Rails.root}/public/education.csv") 
+				send_file("#{Rails.root}/public/d_elibrary.csv" )
+ 
 		end
 		
 end
