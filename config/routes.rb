@@ -16,6 +16,7 @@ Demos::Application.routes.draw do
   resources :home do
     collection do
         get 'd3_tree_chart'
+        get 'doctor_details'
     end
   end
 
