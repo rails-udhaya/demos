@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
 		require 'csv'
 		require 'fileutils'
+		require 'nokogiri'
+		require 'open-uri'
+		require 'openssl'
+		
 		def index
 				
 		end
@@ -20,6 +24,22 @@ class HomeController < ApplicationController
 				#~ @doctors = File.open("#{Rails.root}/public/education.csv") 
 				send_file("#{Rails.root}/public/d_elibrary.csv" )
  
+		end		
+		
+		def stubhub_data
+
+ 
+		end		
+		
+		def fetch_stubhub_data
+				
+@id=params[:stubhub_url].split("-").last.gsub("/","")
+			doc = Nokogiri::HTML(open("http://www.stubhub.com/ticketAPI/restSvc/event/#{@id}"))
+		@dataTable = doc.css('p')
+		#~ @dataTable = JSON.parse(dataTable.children.to_xml)
+		#~ @dataTable = doc.css('div.dataTables_wrapper')
+
+		#~ puts d
 		end
 		
 end

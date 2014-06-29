@@ -18,6 +18,8 @@ Demos::Application.routes.draw do
         get 'd3_tree_chart'
         get 'doctor_details'
         get 'elibrary'
+        get 'stubhub_data'
+        post 'fetch_stubhub_data'
     end
   end
 

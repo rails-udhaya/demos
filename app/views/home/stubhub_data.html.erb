@@ -1,0 +1,26 @@
+
+
+Enter the URL:<input type="text" value="" size="100" id="this_url">
+
+<input type="button" value="Fetch Details" id="fecth_button">
+
+
+<div id="show_data">
+
+<div>
+
+
+<script>
+
+						
+						
+		$("#fecth_button").click(function() {
+ 						$.ajax({
+								type: "POST",
+								url: "<%=fetch_stubhub_data_home_index_path%>",
+								data: { stubhub_url: $("#this_url").val() }
+						}).done(function( msg ) {
+								// Success
+						});
+		});
+</script>

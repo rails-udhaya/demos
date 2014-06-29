@@ -1,0 +1,19 @@
+<%#=raw (@dataTable.to_html)%>
+
+<%#=@dataTable.children.class%>
+
+<%#= JSON.parse(@dataTable.children.to_xml)%>
+Total Ticktes: <%= JSON.parse(@dataTable.children.to_xml)["eventTicketListing"]["totalTickets"]%>
+</br>
+</br>
+
+ <table>
+<%JSON.parse(@dataTable.children.to_xml)["eventTicketListing"]["eventTicket"].each do |t|%>
+<tr>
+<td style="border:1px solid"><%=t["st"]%></td><td style="border:1px solid"><%=t["tc"]["amount"]%></td>
+</tr>
+<%end%>
+ </table>
+
+
+ 

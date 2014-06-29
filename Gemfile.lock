@@ -50,8 +50,11 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.6.0)
     multi_json (1.10.1)
     mysql2 (0.3.16)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.4.5)
@@ -79,6 +82,8 @@ GEM
     rake (10.3.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    render_csv (2.0.0)
+      rails (>= 3.0)
     sass (3.3.8)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -106,7 +111,9 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   mysql2
+  nokogiri
   pg
   rails (= 3.2.17)
+  render_csv
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
