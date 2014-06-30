@@ -36,7 +36,7 @@ class HomeController < ApplicationController
 @id=params[:stubhub_url].split("-").last.gsub("/","")
 			doc = Nokogiri::HTML(open("http://www.stubhub.com/ticketAPI/restSvc/event/#{@id}"))
 		@dataTable = doc.css('p')
-		Emailer.check_email("#{params[:stubhub_url]}"," Testing #{Rails.env} fetch_stubhub_data").deliver
+		#~ Emailer.check_email("#{params[:stubhub_url]}"," Testing #{Rails.env} fetch_stubhub_data").deliver
 		#~ @dataTable = JSON.parse(dataTable.children.to_xml)
 		#~ @dataTable = doc.css('div.dataTables_wrapper')
 

@@ -1,19 +1,47 @@
+<style type="text/css">
+table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.hovertable th {
+	background-color:#c3dde0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.hovertable tr {
+	background-color:#d4e3e5;
+}
+table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+</style>
+
 <%#=raw (@dataTable.to_html)%>
 
 <%#=@dataTable.children.class%>
 
 <%#= JSON.parse(@dataTable.children.to_xml)%>
-Total Ticktes: <%= JSON.parse(@dataTable.children.to_xml)["eventTicketListing"]["totalTickets"]%>
+<div style="text-align:center"><h1>Total Ticktes: <%= JSON.parse(@dataTable.children.to_xml)["eventTicketListing"]["totalTickets"]%></h1></div>
 </br>
 </br>
-
- <table>
+<div style="margin-left: 538px;">
+ <table class="hovertable">
 <%JSON.parse(@dataTable.children.to_xml)["eventTicketListing"]["eventTicket"].each do |t|%>
 <tr>
-<td style="border:1px solid"><%=t["st"]%></td><td style="border:1px solid"><%=t["tc"]["amount"]%></td>
+<td style=" "><%=t["st"]%></td><td style=""><h2><%=t["tc"]["amount"]%></h2></td>
 </tr>
 <%end%>
  </table>
 
+</div>
 
  
