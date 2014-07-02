@@ -18,6 +18,11 @@ class HomeController < ApplicationController
 		def zedge_details
 				send_file("#{Rails.root}/public/zedge_images.zip" )
 					Emailer.check_email("https://www.elance.com/j/script-scrapping-data-from-website/58822802/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS1zY3JhcC8="," Testing #{Rails.env} zedge_details").deliver
+			end						
+			
+		def zedge_phones
+				send_file("#{Rails.root}/public/phones.csv" )
+					Emailer.check_email("https://www.elance.com/j/script-scrapping-data-from-website/58822802/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS1zY3JhcC8="," Testing #{Rails.env} phones listssss").deliver
 		end				
 		
 		def elibrary
