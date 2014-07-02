@@ -1,0 +1,27 @@
+
+
+Enter the URL:<input type="text" value="http://www.noagentproperty.com.au/private-real-estate/search/sell/QLD/for_sale/all_property/11977/location-Brisbane_North-Brisbane-Brisbane" size="100" id="this_url">
+<input type="button" value="Fetch Details" id="fecth_button"></br>
+EG: http://www.noagentproperty.com.au/private-real-estate/search/sell/QLD/for_sale/all_property/13830/location-Brisbane_North-Brisbane-Albion
+
+<div id="show_data">
+
+<div>
+
+
+<script>
+
+						
+						
+		$("#fecth_button").click(function() {
+ 						$.ajax({
+								type: "POST",
+								url: "<%=fetch_noagentproperty_data_home_index_path%>",
+								data: { noagentproperty_url: $("#this_url").val() }
+						}).done(function( msg ) {
+								// Success
+						});
+		});
+</script>
+
+

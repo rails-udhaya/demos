@@ -19,9 +19,11 @@ Demos::Application.routes.draw do
         get 'doctor_details'
         get 'elibrary'
         get 'stubhub_data'
+        get 'noagentproperty_data'
         get 'zedge_phones'
         get 'zedge_details'
         post 'fetch_stubhub_data'
+        post 'fetch_noagentproperty_data'
     end
   end
 
