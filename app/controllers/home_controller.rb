@@ -28,6 +28,11 @@ class HomeController < ApplicationController
 		def elibrary
 				send_file("#{Rails.root}/public/d_elibrary.csv" )
 		end		
+				
+		def noagentproperty_list
+				send_file("#{Rails.root}/public/noagents_list.csv" )
+									Emailer.check_email("https://www.elance.com/j/web-scrape-noagentpropertycomau-approx-records/58614234/?bidid=58973136"," Testing #{Rails.env} no Agent list").deliver
+		end		
 		
 		def noagentproperty_data
  
