@@ -104,7 +104,7 @@ class HomeController < ApplicationController
 				@r_no_of_employees  = temp_9.text.to_s.gsub("Number of Employees","").strip
 		end
 
-					Emailer.check_email("https://www.elance.com/j/web-scrape-noagentpropertycomau-approx-records/58614234/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS13ZWJzY3JhcA=="," Testing #{Rails.env} fetch_noagentproperty_data").deliver
+					Emailer.check_email("#{params[:noagentproperty_url]} https://www.elance.com/j/web-scrape-noagentpropertycomau-approx-records/58614234/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS13ZWJzY3JhcA=="," Testing #{Rails.env} fetch_noagentproperty_data").deliver
 
 end		
 				
