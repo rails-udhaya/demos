@@ -41,10 +41,13 @@ class HomeController < ApplicationController
 		@b_region = doc.css("div#breadCrumb").text
 		@c_headline  = doc.css("div#detail h1").text
 		@d_sub_head  = doc.css("h4#titleText").text
-		@e_first_para  = doc.css("p#description").text
+		@e_first_para  = doc.at("p#description").next_element.text
 
 
 		@f_address = doc.css("div#sidebar-2 div.sideMenu")[1].css("li")[1].text.to_s.gsub("Address :","").strip
+		
+		@g_sld =  doc.css("div.topBox h4").text.strip
+		
 		@h_details = doc.css("div#sidebar-2 div.sideMenu")[1].css("li")[0].text.to_s.gsub("For Sale","").strip
 		@i_prop_id = doc.css("div#sidebar-2 div.sideMenu")[1].css("li")[2].text.to_s.gsub("Property ID :","").strip
 
