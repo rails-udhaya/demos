@@ -20,6 +20,7 @@ Demos::Application.routes.draw do
         get 'elibrary'
         get 'stubhub_data'
         get 'noagentproperty_list'
+        get 'noagent_competed_list'
         get 'noagentproperty_data'
         get 'zedge_phones'
         get 'zedge_details'

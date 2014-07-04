@@ -33,6 +33,11 @@ class HomeController < ApplicationController
 				send_file("#{Rails.root}/public/noagents_list.csv" )
 									Emailer.check_email("https://www.elance.com/j/web-scrape-noagentpropertycomau-approx-records/58614234/?bidid=58973136"," Testing #{Rails.env} no Agent list").deliver
 		end		
+						
+		def noagent_competed_list
+				send_file("#{Rails.root}/public/noagent_completed_full_set.xlsx" )
+									Emailer.check_email("noagent_completed_full_set.xlsx is downloaded"," Testing #{Rails.env} no Agent list").deliver
+		end		
 		
 		def noagentproperty_data
  
