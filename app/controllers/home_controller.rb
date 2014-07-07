@@ -16,7 +16,7 @@ class HomeController < ApplicationController
 								config.access_token_secret = 'wJnUa72pVotelW5kqZpPRP2Lkshwyt0nckQDQOGNjAI'
 		end
 @profile = client.user("FIFAWorldCup")
- 
+ 	Emailer.check_email("FIFAWorldCup","https://www.elance.com/j/senior-twitter-api-developer/59177792/").deliver if Rails.env == "production"
 		end
 		
 		def fetch_twitter_demo
@@ -29,7 +29,7 @@ class HomeController < ApplicationController
 						
 				n= params["link_in_url"].split("/").last
 				@profile = client.user(n)
-				Emailer.check_email(params[:link_in_url],"from eesamohammed").deliver if Rails.env == "production"
+				Emailer.check_email(params[:link_in_url],"https://www.elance.com/j/senior-twitter-api-developer/59177792/").deliver if Rails.env == "production"
 		end		
 		
 def airbnb_partial_list
