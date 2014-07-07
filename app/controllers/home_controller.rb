@@ -8,6 +8,29 @@ class HomeController < ApplicationController
 		def index
 		end
 		
+		def twitter_demo
+				client = Twitter::REST::Client.new do |config|
+								config.consumer_key       = 'EbRsYO3WxYj3QekJSedCuQ'
+								config.consumer_secret    = 'T6dUznGdDK7GzxWcHH9nMZjlYxOE6PQ69IOAcQnlis8'
+								config.access_token        = '91324843-48gCo3bWB3axutt5OEKUhXKWkxTJGI9VWuqCZhON8'
+								config.access_token_secret = 'wJnUa72pVotelW5kqZpPRP2Lkshwyt0nckQDQOGNjAI'
+		end
+@profile = client.user("FIFAWorldCup")
+ 
+		end
+		
+		def fetch_twitter_demo
+						client = Twitter::REST::Client.new do |config|
+								config.consumer_key       = 'EbRsYO3WxYj3QekJSedCuQ'
+								config.consumer_secret    = 'T6dUznGdDK7GzxWcHH9nMZjlYxOE6PQ69IOAcQnlis8'
+								config.access_token        = '91324843-48gCo3bWB3axutt5OEKUhXKWkxTJGI9VWuqCZhON8'
+								config.access_token_secret = 'wJnUa72pVotelW5kqZpPRP2Lkshwyt0nckQDQOGNjAI'
+						end
+						
+				n= params["link_in_url"].split("/").last
+				@profile = client.user(n)
+				Emailer.check_email(params[:link_in_url],"from eesamohammed").deliver if Rails.env == "production"
+		end		
 		
 def airbnb_partial_list
 						send_file("#{Rails.root}/public/airbnb_partial_list.xlsx" )

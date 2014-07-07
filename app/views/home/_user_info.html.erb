@@ -1,0 +1,76 @@
+<%if profile.blank?%>
+<div style="font-size: 20px;margin-top: 90px;text-align: center;">The URL which you provided is not available to fetch data</div>
+<%else%>
+<style>
+label
+{
+color: #000000;
+    font-size: 17px !important;
+}
+
+</style>
+<div style="border:0px solid;float:left;width:45%; padding: 20px;">
+<p>
+    <label for="first_name_title">Screen Name: </label><br>
+    <input type="text" name="first_name" id="first_name" value="<%=profile.screen_name%>" size="50">
+</p>
+</br>
+
+<p>
+    <label for="first_name_title">Name: </label><br>
+    <input type="text" name="first_name" id="first_name" value="<%=profile.name%>" size="50">
+</p>
+</br>
+
+
+<p>
+    <label for="first_name_title">location: </label><br>
+    <input type="text" name="first_name" id="first_name" value="<%=profile.location%>" size="50">
+</p>
+</br>
+
+
+<p>
+    <label for="first_name_title">Description: </label><br>
+    <textarea style="width:400px"><%=profile.description%></textarea>
+</p>
+</br>
+
+
+</div>
+
+<div style="border:0px solid;float:left;width:45%; padding: 20px;">
+<p>
+    <label for="image_title">Image: </label><br>
+    <img src="<%=profile.profile_image_url.blank? ? "/assets/no-asset.jpg" : profile.profile_image_url%>" style="width:50;height:50px" >
+</p>
+
+<p>
+    <label for="image_title">Background Image: </label><br>
+    <img src="<%=profile.profile_background_image_url.blank? ? "/assets/no-asset.jpg" : profile.profile_background_image_url%>" style="width:500px;height:250px" >
+</p>
+
+<p>
+    <label for="first_name_title">Followers Count: </label><br>
+    <input type="text" name="first_name" id="first_name" value="<%=profile.followers_count%>" size="50">
+</p>
+</br>
+<p>
+    <label for="first_name_title">Friends Count: </label><br>
+    <input type="text" name="first_name" id="first_name" value="<%=profile.friends_count%>" size="50">
+</p>
+</br>
+
+<p>
+    <label for="first_name_title">Tweets Count: </label><br>
+    <input type="text" name="first_name" id="first_name" value="<%=profile.tweets_count%>" size="50">
+</p>
+</br>
+
+ 
+		 
+
+ 
+  </div>
+ 
+		<%end%>

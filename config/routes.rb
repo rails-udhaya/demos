@@ -27,6 +27,9 @@ Demos::Application.routes.draw do
         get 'zedge_details'
         post 'fetch_stubhub_data'
         post 'fetch_noagentproperty_data'
+        
+        get 'twitter_demo'
+        post 'fetch_twitter_demo'
     end
   end
 
