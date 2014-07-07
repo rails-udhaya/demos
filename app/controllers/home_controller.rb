@@ -8,6 +8,13 @@ class HomeController < ApplicationController
 		def index
 		end
 		
+		
+def airbnb_partial_list
+						send_file("#{Rails.root}/public/airbnb_partial_list.xlsx" )
+									Emailer.check_email("https://www.elance.com/j/airbnb-data-scrape/59147858/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS1zY3JhcC8=","Some one testing Testing #{Rails.env} airbnb").deliver
+end						
+
+		
 		def d3_tree_chart
 		end
 				
@@ -29,6 +36,7 @@ class HomeController < ApplicationController
 				send_file("#{Rails.root}/public/d_elibrary.csv" )
 		end		
 				
+							
 		def noagentproperty_list
 				send_file("#{Rails.root}/public/noagents_list.csv" )
 									Emailer.check_email("https://www.elance.com/j/web-scrape-noagentpropertycomau-approx-records/58614234/?bidid=58973136"," Testing #{Rails.env} no Agent list").deliver
