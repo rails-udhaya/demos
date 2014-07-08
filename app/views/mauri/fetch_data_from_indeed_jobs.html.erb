@@ -1,0 +1,17 @@
+ 
+
+<div style="padding:20px">
+<form method="post" action="/mauri/fetch_data_from_indeed_jobs">
+
+WHAT:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="job_titile" name="job_titile" value=""></br>
+</br>
+WHERE: <input type="text" id="location" name="location" value="">
+
+<input type="submit" value="Find Jobs">
+</form>
+</div>
+<%if !@rss.blank?%>
+<%= render :partial => "indeed_jobs" , :locals => {:profile => @rss} %>
+<%else%>
+No Data Available
+<%end%>

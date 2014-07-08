@@ -1,0 +1,2 @@
+module MauriHelper
+end

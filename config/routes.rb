@@ -31,7 +31,13 @@ Demos::Application.routes.draw do
         get 'twitter_demo'
         post 'fetch_twitter_demo'
     end
-  end
+end
+
+resources :mauri do
+      collection do
+          post 'fetch_data_from_indeed_jobs'
+      end
+end
 
   # Sample resource route with options:
   #   resources :products do

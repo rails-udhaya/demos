@@ -11,6 +11,8 @@ gem 'render_csv'
 gem 'nokogiri'
 gem 'twitter'
 gem 'tweetstream'
+#gem 'simple-rss'
+gem 'feed-normalizer'
 
 # Gems used only for assets and not required
 # in production environments by default.

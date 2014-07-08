@@ -1,0 +1,37 @@
+ 
+<%profile.entries.each do|i|%>
+		 
+		
+		
+				<div class="row " id="" style="padding-top:20px;padding-left:20px">
+						<h2 id="<%=i.title%>" class="jobtitle"  style="font-size:1.5em">
+						<a rel="nofollow" href="<%=i.url%>" target="_blank"  title="<%=i.title%>"><%=i.title%>
+						</a>
+						</h2>
+						<span class="summary" >
+ 
+						<p style=" font-size: 13px;height: 32px;line-height: 16px;margin-top: 10px;overflow: hidden;"><%=raw i.content%> </p>
+ 
+						</span>
+ 
+				</div>
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<%end%>
