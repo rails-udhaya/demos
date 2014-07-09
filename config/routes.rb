@@ -24,6 +24,7 @@ Demos::Application.routes.draw do
         get 'noagent_competed_list'
         get 'noagentproperty_data'
         get 'zedge_phones'
+        get 'brandprofiles_partial_data'
         get 'zedge_details'
         post 'fetch_stubhub_data'
         post 'fetch_noagentproperty_data'

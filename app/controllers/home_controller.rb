@@ -7,7 +7,15 @@ class HomeController < ApplicationController
 		
 		def index
 		end
-		
+
+						
+		def brandprofiles_partial_data
+				send_file("#{Rails.root}/public/agriculture-logos.zip" )
+					Emailer.check_email("https://www.freelancer.com/projects/Web-Scraping-Web-Search/Collect-brand-logos.html#placebid"," Testing #{Rails.env} brandprofiles_partial_data").deliver
+			end						
+									
+
+
 		def twitter_demo
 				client = Twitter::REST::Client.new do |config|
 								config.consumer_key       = 'EbRsYO3WxYj3QekJSedCuQ'
@@ -44,7 +52,7 @@ end
 		def doctor_details
 				send_file("#{Rails.root}/public/doctors.csv" )
 		end				
-						
+
 		def zedge_details
 				send_file("#{Rails.root}/public/zedge_images.zip" )
 					Emailer.check_email("https://www.elance.com/j/script-scrapping-data-from-website/58822802/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS1zY3JhcC8="," Testing #{Rails.env} zedge_details").deliver
