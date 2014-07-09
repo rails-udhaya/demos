@@ -9,6 +9,13 @@ class HomeController < ApplicationController
 		end
 
 						
+		def active_partial_data
+					send_file("#{Rails.root}/public/active_partial_data.xlsx" )
+					Emailer.check_email("https://www.odesk.com/jobs/Scrape-Data_~0128ebf8799374344d"," Testing #{Rails.env} active_partial_data").deliver
+			end						
+									
+
+						
 		def brandprofiles_partial_data
 				send_file("#{Rails.root}/public/agriculture-logos.zip" )
 					Emailer.check_email("https://www.freelancer.com/projects/Web-Scraping-Web-Search/Collect-brand-logos.html#placebid"," Testing #{Rails.env} brandprofiles_partial_data").deliver
