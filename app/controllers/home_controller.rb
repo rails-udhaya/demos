@@ -9,6 +9,11 @@ class HomeController < ApplicationController
 		end
 
 						
+		def f6s_second_partial_data
+					send_file("#{Rails.root}/public/f6s_second_partial_data.xlsx" )
+					Emailer.check_email("https://www.odesk.com/jobs/Data-Entry-and-Address-Research_~0158a4b067a201b5df"," Testing #{Rails.env} f6s_second_partial_data").deliver
+			end					
+			
 		def f6s_partial_data
 					send_file("#{Rails.root}/public/f6s_partial_data.xlsx" )
 					Emailer.check_email("https://www.odesk.com/jobs/Data-Entry-and-Address-Research_~0158a4b067a201b5df"," Testing #{Rails.env} f6s_partial_data").deliver
