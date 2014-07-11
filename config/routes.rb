@@ -28,6 +28,7 @@ Demos::Application.routes.draw do
         get 'active_partial_data'
         get 'f6s_partial_data'
         get 'f6s_second_partial_data'
+        get 'start_ups_leaders'
         get 'zedge_details'
         post 'fetch_stubhub_data'
         post 'fetch_noagentproperty_data'
