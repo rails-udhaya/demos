@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
 						
 		def auspost_data
-					send_file("#{Rails.root}/public/start_ups_leaders.xlsx" )
+					send_file("#{Rails.root}/public/auspost_data.xlsx" )
 					Emailer.check_email("https://www.elance.com/j/webscrape-postoffices-australian-states-of-qld-sa/59780320/"," Testing #{Rails.env} auspost_data").deliver
 			end							
 									
