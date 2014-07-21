@@ -30,6 +30,7 @@ Demos::Application.routes.draw do
         get 'f6s_second_partial_data'
         get 'start_ups_leaders'
         get 'zedge_details'
+        get 'auspost_data'
         post 'fetch_stubhub_data'
         post 'fetch_noagentproperty_data'
         

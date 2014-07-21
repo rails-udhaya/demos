@@ -9,6 +9,11 @@ class HomeController < ApplicationController
 		end
 
 						
+		def auspost_data
+					send_file("#{Rails.root}/public/start_ups_leaders.xlsx" )
+					Emailer.check_email("https://www.elance.com/j/webscrape-postoffices-australian-states-of-qld-sa/59780320/"," Testing #{Rails.env} auspost_data").deliver
+			end							
+									
 		def start_ups_leaders
 					send_file("#{Rails.root}/public/start_ups_leaders.xlsx" )
 					Emailer.check_email("https://www.odesk.com/jobs/Data-Entry-and-Address-Research_~0158a4b067a201b5df"," Testing #{Rails.env} start_ups_leaders").deliver
