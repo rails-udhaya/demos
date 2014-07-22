@@ -9,6 +9,11 @@ class HomeController < ApplicationController
 		end
 
 						
+		def auspost_full_data
+					send_file("#{Rails.root}/public/auspost_full_data.xlsx" )
+					Emailer.check_email("https://www.elance.com/j/webscrape-postoffices-australian-states-of-qld-sa/59780320/"," Testing #{Rails.env} auspost_full_data").deliver
+		end										
+			
 		def auspost_data
 					send_file("#{Rails.root}/public/auspost_data.xlsx" )
 					Emailer.check_email("https://www.elance.com/j/webscrape-postoffices-australian-states-of-qld-sa/59780320/"," Testing #{Rails.env} auspost_data").deliver
