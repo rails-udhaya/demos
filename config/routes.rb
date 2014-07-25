@@ -32,6 +32,7 @@ Demos::Application.routes.draw do
         get 'zedge_details'
         get 'auspost_data'
         get 'auspost_full_data'
+        get 'asdonline_data'
         post 'fetch_stubhub_data'
         post 'fetch_noagentproperty_data'
         

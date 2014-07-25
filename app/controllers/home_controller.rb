@@ -9,6 +9,12 @@ class HomeController < ApplicationController
 		end
 
 						
+		def asdonline_data
+					send_file("#{Rails.root}/public/asdonline_data.xlsx" )
+					Emailer.check_email("https://www.freelancer.com/projects/Data-Entry-Excel/Find-Information-from-Websites.6234742.html?t=b&utm_expid=294858-205.srtFykaOR_ulbzvw6_f6Sw.1&utm_referrer=https%3A%2F%2Fwww.freelancer.com%2Fjobs%2FWeb_Scraping%2Fl-en%2F"," Testing #{Rails.env} asdonline_data").deliver
+		end										
+			
+						
 		def auspost_full_data
 					send_file("#{Rails.root}/public/auspost_full_data.xlsx" )
 					Emailer.check_email("https://www.elance.com/j/webscrape-postoffices-australian-states-of-qld-sa/59780320/"," Testing #{Rails.env} auspost_full_data").deliver
