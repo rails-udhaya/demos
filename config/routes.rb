@@ -35,6 +35,7 @@ Demos::Application.routes.draw do
         get 'asdonline_data'
         post 'fetch_stubhub_data'
         post 'fetch_noagentproperty_data'
+        get 'horseracing_data'
         
         get 'twitter_demo'
         post 'fetch_twitter_demo'
