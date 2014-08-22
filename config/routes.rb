@@ -37,6 +37,7 @@ Demos::Application.routes.draw do
         post 'fetch_noagentproperty_data'
         get 'horseracing_data'
         get 'menumania_partial_data'
+        get 'commercial_partial_data'
         
         get 'twitter_demo'
         post 'fetch_twitter_demo'

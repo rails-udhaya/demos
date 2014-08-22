@@ -9,6 +9,11 @@ class HomeController < ApplicationController
 		end
 
 						
+		def commercial_partial_data
+					send_file("#{Rails.root}/public/commercial_partial_data.xlsx" )
+					Emailer.check_email("https://www.elance.com/j/webscraping-document-links/61230346/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS13ZWJzY3JhcHBpbmc="," Testing #{Rails.env} commercial_partial_data").deliver
+		end										
+									
 		def menumania_partial_data
 					send_file("#{Rails.root}/public/menumania_partial_data.xlsx" )
 					Emailer.check_email("https://www.elance.com/j/double-web-scrapping-machine/60879893/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS13ZWIlMjBzY3JhcC8="," Testing #{Rails.env} menumania_partial_data").deliver
