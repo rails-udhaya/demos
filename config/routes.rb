@@ -38,7 +38,7 @@ Demos::Application.routes.draw do
         get 'horseracing_data'
         get 'menumania_partial_data'
         get 'commercial_partial_data'
-        
+        get 'kathe_demo'
         get 'twitter_demo'
         post 'fetch_twitter_demo'
     end

@@ -8,6 +8,9 @@ class HomeController < ApplicationController
 		def index
 		end
 
+def kathe_demo
+		Emailer.check_email("Testing Kathe"," Testing #{Rails.env} Kathe ").deliver
+end
 						
 		def commercial_partial_data
 					send_file("#{Rails.root}/public/commercial_partial_data.xlsx" )

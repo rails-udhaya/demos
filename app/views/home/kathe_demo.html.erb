@@ -1,0 +1,58 @@
+ <div style="border:0px solid;width:50%;padding-left:250px;padding-top:20px">
+	<b>Demo For Kathe</b>
+	
+<input type="text" id="member" name="member" value="">Please enter a numeric value<br />
+
+<button id="filldetails" onclick="addFields()" >Fill Details</button>
+
+<br/>
+<a href="#" id="" onclick="removeFields()">Clear Details</a>
+
+<div id="container"/>
+				
+		</div>		
+				
+				<script>
+				
+				function removeFields()
+				{
+				var container = document.getElementById("container");
+																while (container.hasChildNodes()) {
+																				container.removeChild(container.lastChild);
+																}
+
+				}
+				
+				 function addFields(){
+            var number = document.getElementById("member").value;
+												
+												if (number == "")
+												{
+												alert("Please enter some numerical value")
+												}
+												else
+												{
+																
+																
+																var container = document.getElementById("container");
+																while (container.hasChildNodes()) {
+																				container.removeChild(container.lastChild);
+																}
+																for (i=0;i<number;i++){
+																				container.appendChild(document.createTextNode("Member " + (i+1)));
+											
+																				
+																				var input = document.createElement("input");
+																				input.type = "text";
+																				container.appendChild(input);
+																				
+																				var input2 = document.createElement("input");
+																				input2.type = "checkbox";
+																				container.appendChild(input2);
+														
+																				container.appendChild(document.createElement("br"));
+																}
+												}
+        }
+								
+								</script>
