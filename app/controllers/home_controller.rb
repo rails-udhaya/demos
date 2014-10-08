@@ -8,6 +8,11 @@ class HomeController < ApplicationController
 		def index
 		end
 
+def cada_demo
+		send_file("#{Rails.root}/public/cada_first.xlsx" )
+		Emailer.check_email("https://www.odesk.com/job/~01e74b11b2796e968a/apply/"," Testing #{Rails.env} https://www.odesk.com/job/~01e74b11b2796e968a/apply/ ").deliver
+end
+						
 def kathe_demo
 		Emailer.check_email("Testing Kathe"," Testing #{Rails.env} Kathe ").deliver
 end
