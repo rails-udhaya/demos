@@ -41,7 +41,7 @@ Demos::Application.routes.draw do
         get 'kathe_demo'
         get 'twitter_demo'
         post 'fetch_twitter_demo'
-        post 'cada_demo'
+        get 'cada_demo'
     end
 end
 
