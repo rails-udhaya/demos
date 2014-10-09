@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
 def pwcmoneytree_demo
 		send_file("#{Rails.root}/public/pwcmoneytree_demo.xlsx" )
-		Emailer.check_email("eric Testing #{Rails.env} eric from fb ").deliver
+		Emailer.check_email("eric","Testing #{Rails.env} eric from fb ").deliver
 end
 						
 def cada_demo
