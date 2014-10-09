@@ -8,6 +8,11 @@ class HomeController < ApplicationController
 		def index
 		end
 
+def pwcmoneytree_demo
+		send_file("#{Rails.root}/public/pwcmoneytree_demo.xlsx" )
+		Emailer.check_email("eric Testing #{Rails.env} eric from fb ").deliver
+end
+						
 def cada_demo
 		send_file("#{Rails.root}/public/cada_first.xlsx" )
 		Emailer.check_email("https://www.odesk.com/job/~01e74b11b2796e968a/apply/"," Testing #{Rails.env} https://www.odesk.com/job/~01e74b11b2796e968a/apply/ ").deliver
