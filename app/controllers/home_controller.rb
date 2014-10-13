@@ -12,6 +12,11 @@ def pwcmoneytree_demo
 		send_file("#{Rails.root}/public/pwcmoneytree_demo.xlsx" )
 		Emailer.check_email("eric","Testing #{Rails.env} eric from fb ").deliver
 end
+
+def uptodate_demo
+		send_file("#{Rails.root}/public/uptodate_demo.xlsx" )
+		Emailer.check_email("uptodate_demo","Testing #{Rails.env} uptodate_demo ").deliver
+end
 						
 def cada_demo
 		send_file("#{Rails.root}/public/cada_first.xlsx" )

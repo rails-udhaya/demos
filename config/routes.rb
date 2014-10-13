@@ -43,6 +43,7 @@ Demos::Application.routes.draw do
         post 'fetch_twitter_demo'
         get 'cada_demo'
         get 'pwcmoneytree_demo'
+        get 'uptodate_demo'
     end
 end
 
