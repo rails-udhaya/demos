@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
 def usasfmembers_demo
 		send_file("#{Rails.root}/public/usasfmembers_demo.xlsx" )
-		Emailer.check_email("eric","Testing #{Rails.env} eric from fb ").deliver
+		Emailer.check_email("https://www.odesk.com/jobs/Data-Scraping-Script_~0130bb7873b4eddf9e","Testing #{Rails.env} Scraping-Script ").deliver
 end
 
 def pwcmoneytree_demo
