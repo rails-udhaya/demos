@@ -44,6 +44,7 @@ Demos::Application.routes.draw do
         get 'cada_demo'
         get 'pwcmoneytree_demo'
         get 'uptodate_demo'
+        get 'usasfmembers_demo'
     end
 end
 
