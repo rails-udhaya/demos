@@ -13,6 +13,11 @@ def usasfmembers_demo
 		Emailer.check_email("https://www.odesk.com/jobs/Data-Scraping-Script_~0130bb7873b4eddf9e","Testing #{Rails.env} Scraping-Script ").deliver
 end
 
+def tripadvisor_demo
+		send_file("#{Rails.root}/public/tripadvisor_demo_partiall_data.xlsx" )
+		Emailer.check_email("https://www.elance.com/j/p-scrape-detail-from-tripadvisor-website-records/63840681/?eventId=267483727","Testing #{Rails.env} Tim ").deliver
+end
+
 def pwcmoneytree_demo
 		send_file("#{Rails.root}/public/pwcmoneytree_demo.xlsx" )
 		Emailer.check_email("eric","Testing #{Rails.env} eric from fb ").deliver

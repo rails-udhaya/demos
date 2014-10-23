@@ -45,6 +45,7 @@ Demos::Application.routes.draw do
         get 'pwcmoneytree_demo'
         get 'uptodate_demo'
         get 'usasfmembers_demo'
+        get 'tripadvisor_demo'
     end
 end
 
