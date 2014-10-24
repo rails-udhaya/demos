@@ -46,6 +46,7 @@ Demos::Application.routes.draw do
         get 'uptodate_demo'
         get 'usasfmembers_demo'
         get 'tripadvisor_demo'
+        get 'tripadvisor_v_1'
     end
 end
 
