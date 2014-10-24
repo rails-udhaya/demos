@@ -8,6 +8,12 @@ class HomeController < ApplicationController
 		def index
 		end
 
+def emersonecologics_demo
+		send_file("#{Rails.root}/public/emersonecologics_demo.xlsx" )
+		Emailer.check_email("https://www.elance.com/j/emersion-scrap/63858957/?backurl=aHR0cHM6Ly93d3cuZWxhbmNlLmNvbS9yL2pvYnMvcS1zY3JhcC8=","Testing #{Rails.env} Emersion ").deliver
+end
+
+
 def usasfmembers_demo
 		send_file("#{Rails.root}/public/usasfmembers_demo.xlsx" )
 		Emailer.check_email("https://www.odesk.com/jobs/Data-Scraping-Script_~0130bb7873b4eddf9e","Testing #{Rails.env} Scraping-Script ").deliver
