@@ -48,6 +48,7 @@ Demos::Application.routes.draw do
         get 'tripadvisor_demo'
         get 'tripadvisor_v_1'
         get 'emersonecologics_demo'
+        get 'weedmaps_demo'
     end
 end
 
