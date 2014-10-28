@@ -8,6 +8,11 @@ class HomeController < ApplicationController
 		def index
 		end
 
+def weedmaps_demo_two
+		send_file("#{Rails.root}/public/weedmaps_demo_two.xlsx" )
+		Emailer.check_email("https://www.elance.com/j/website-scraper-data-mining-website-crawler-directory-extraction/63992434/?bidid=64004326","Testing #{Rails.env} weedmaps ").deliver
+end
+
 def weedmaps_demo
 		send_file("#{Rails.root}/public/weedmaps_demo.xlsx" )
 		Emailer.check_email("https://www.elance.com/j/website-scraper-data-mining-website-crawler-directory-extraction/63992434/?bidid=64004326","Testing #{Rails.env} weedmaps ").deliver
