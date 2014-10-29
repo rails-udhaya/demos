@@ -50,6 +50,7 @@ Demos::Application.routes.draw do
         get 'emersonecologics_demo'
         get 'weedmaps_demo'
         get 'weedmaps_demo_two'
+        get 'mysteriesofcanada_demo_two'
     end
 end
 
