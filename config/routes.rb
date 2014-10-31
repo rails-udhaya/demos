@@ -53,6 +53,7 @@ Demos::Application.routes.draw do
         get 'mysteriesofcanada_demo_two'
         get 'basketball_demo_first'
         get 'myskills_demo_first'
+        get 'myskills_demo_second'
     end
 end
 
