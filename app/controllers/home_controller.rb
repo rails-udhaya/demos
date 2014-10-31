@@ -8,9 +8,9 @@ class HomeController < ApplicationController
 		def index
 		end
 
-def mysteriesofcanada_demo_two
-		send_file("#{Rails.root}/public/mysteriesofcanada_demo.xlsx" )
-		Emailer.check_email("https://www.elance.com/j/some-content-scraping-help/64096971/?bidid=64097670","Testing #{Rails.env} canada blog ").deliver
+def basketball_demo_first
+		send_file("#{Rails.root}/public/basketball_demo_first.xlsx" )
+		Emailer.check_email("https://www.odesk.com/mc/#thread/350585820","Testing #{Rails.env} basket ball ").deliver
 end
 
 def weedmaps_demo_two
