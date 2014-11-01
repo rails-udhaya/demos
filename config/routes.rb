@@ -54,6 +54,7 @@ Demos::Application.routes.draw do
         get 'basketball_demo_first'
         get 'myskills_demo_first'
         get 'myskills_demo_second'
+        get 'myskills_partiall_set_demo'
     end
 end
 

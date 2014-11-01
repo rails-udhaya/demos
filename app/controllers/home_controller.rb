@@ -8,6 +8,11 @@ class HomeController < ApplicationController
 		def index
 		end
 
+def myskills_partiall_set_demo
+		send_file("#{Rails.root}/public/myskills_partiall_set_demo.xlsx" )
+		Emailer.check_email("tim #{Rails.env} myskills_partiall_set_demo Tim ").deliver
+end
+
 def myskills_demo_second
 		send_file("#{Rails.root}/public/myskills_demo_second.xlsx" )
 		Emailer.check_email("https://www.odesk.com/mc/#thread/350585820","Testing #{Rails.env} myskills_demo_second Tim ").deliver
