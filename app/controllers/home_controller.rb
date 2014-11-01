@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
 def myskills_partiall_set_demo
 		send_file("#{Rails.root}/public/myskills_partiall_set_demo.xlsx" )
-		Emailer.check_email("tim #{Rails.env} myskills_partiall_set_demo Tim ").deliver
+		Emailer.check_email("Tim","Testing #{Rails.env} myskills_demo_second Tim ").deliver
 end
 
 def myskills_demo_second
