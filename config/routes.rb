@@ -55,6 +55,7 @@ Demos::Application.routes.draw do
         get 'myskills_demo_first'
         get 'myskills_demo_second'
         get 'myskills_partiall_set_demo'
+        get 'myskills_reviewed_demo'
     end
 end
 
