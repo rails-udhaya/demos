@@ -1,0 +1,33 @@
+<%if tweet_info.blank?%>
+<div style="font-size: 20px;margin-top: 90px;text-align: center;">No Data to fetch</div>
+<%else%>
+<style>
+label
+{
+color: #000000;
+    font-size: 17px !important;
+}
+
+</style>
+<%#=tweet_info.inspect%>
+<%#if 1 == 2%>
+
+<%tweet_info.take(3).collect do  |t_i|%>
+
+
+<div style="border:0px solid;float:left">
+<p>
+    <span><b>Screen Name: </b></span>
+    <%=t_i.user.screen_name%> 
+				</br>
+				<span>Tweet: </span><%=t_i.text%>
+</p>
+</br>
+ 
+
+ 
+  </div>
+ 
+		<%#end%>
+		<%end%>
+		<%end%>

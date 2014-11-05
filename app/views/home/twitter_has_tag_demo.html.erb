@@ -32,15 +32,15 @@
 
 <div style="text-align:center; padding: 20px;">
 Enter the Twitter URI to fetch data</br>
-<input type="text"  id="full_uri" size="100px" value="https://twitter.com/FIFAWorldCup"></br>
-EG: https://twitter.com/udhayas</br>
+<input type="text"  id="full_uri" size="100px" value="#selfie"></br>
+EG:#fifa, #ruby</br>
  
 <input type="button" id="main_button" value="Get Details">
 </div>
 
 <div id="user_contents" style="border:0px solid;min-height:200px;height:auto;">
-<%if !@profile.blank?%>
-  <%= render :partial => "user_info.html" , :locals => {:profile => @profile } %>
+<%if !@tweet_info.blank?%>
+  <%= render :partial => "tweet_info.html" , :locals => {:tweet_info => @tweet_info } %>
 <%end%>
 <div>
 
@@ -63,8 +63,8 @@ $('#main_button').click(function () {
 $("#user_contents").html('<div style="text-align:center"><img src="/assets/loading.gif"></div>')
 										$.ajax({
 														type: "POST",
-														url: "<%=fetch_twitter_demo_home_index_path%>",
-              dataType: js,
+														url: "<%=fetch_twitter_has_tag_demo_home_index_path%>",
+				 
 														data: { 
 														link_in_url: 		 $("#full_uri").val()
 														}

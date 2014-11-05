@@ -162,7 +162,39 @@ end
 					Emailer.check_email("https://www.freelancer.com/projects/Web-Scraping-Web-Search/Collect-brand-logos.html#placebid"," Testing #{Rails.env} brandprofiles_partial_data").deliver
 			end						
 									
+def twitter_has_tag_demo
+						#~ client = Twitter::REST::Client.new do |config|
+								#~ config.consumer_key       = 'EbRsYO3WxYj3QekJSedCuQ'
+								#~ config.consumer_secret    = 'T6dUznGdDK7GzxWcHH9nMZjlYxOE6PQ69IOAcQnlis8'
+								#~ config.access_token        = '91324843-48gCo3bWB3axutt5OEKUhXKWkxTJGI9VWuqCZhON8'
+								#~ config.access_token_secret = 'wJnUa72pVotelW5kqZpPRP2Lkshwyt0nckQDQOGNjAI'
+						#~ end
+											client = Twitter::REST::Client.new do |config|
+								config.consumer_key       = 'fNbt7rj3YrGrRv2tJUdQ'
+								config.consumer_secret    = '1j2AEjIOzsTVksXAyMFoMbgKDazq05QnoHpirYAlsc'
+								config.access_token        = '555117591-prK5YotrPuvfCjb1ee9kVZwPwwcjoOpDAiPKQB0g'
+								config.access_token_secret = 'QUXIsdPwE7BwmW4DzXXkJ9J6QxYPGcjz0fnemJss'
+						end
+						
+						@tweet_info = client.search("#selfie -rt")
+ 	Emailer.check_email("HAS TAG DEMO","https://www.elance.com/j/system-collect-tweets-from-twitter-show-on-web/64407234/?eventId=270084835").deliver if Rails.env == "production"
+						
+end
 
+def fetch_twitter_has_tag_demo
+		
+				client = Twitter::REST::Client.new do |config|
+								config.consumer_key       = 'fNbt7rj3YrGrRv2tJUdQ'
+								config.consumer_secret    = '1j2AEjIOzsTVksXAyMFoMbgKDazq05QnoHpirYAlsc'
+								config.access_token        = '555117591-prK5YotrPuvfCjb1ee9kVZwPwwcjoOpDAiPKQB0g'
+								config.access_token_secret = 'QUXIsdPwE7BwmW4DzXXkJ9J6QxYPGcjz0fnemJss'
+						end
+						
+				n= params["link_in_url"] 
+				@tweet_info= client.search("#{n} -rt")
+				#~ Emailer.check_email(params[:link_in_url],"https://www.elance.com/j/senior-twitter-api-developer/59177792/").deliver if Rails.env == "production"
+end
+ 
 
 		def twitter_demo
 				client = Twitter::REST::Client.new do |config|

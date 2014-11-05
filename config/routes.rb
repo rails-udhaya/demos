@@ -42,6 +42,8 @@ Demos::Application.routes.draw do
         get 'commercial_partial_data'
         get 'kathe_demo'
         get 'twitter_demo'
+        get 'twitter_has_tag_demo'
+        post 'fetch_twitter_has_tag_demo'
         post 'fetch_twitter_demo'
         get 'cada_demo'
         get 'pwcmoneytree_demo'
