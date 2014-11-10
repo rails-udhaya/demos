@@ -15,6 +15,7 @@ Demos::Application.routes.draw do
   
   resources :home do
     collection do
+        get 'gatherer_demo_v1'
         get 'basketball_final'
         get 'training_gov_reviewed_demo'
         get 'd3_tree_chart'
