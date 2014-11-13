@@ -13,6 +13,11 @@ def gatherer_demo_v1
 		Emailer.check_email("https://www.freelancer.com/projects/Javascript-CPlusPlus-Programming/Scrape-all-data-cards-from.html#header-login-modal","Testing #{Rails.env} gatherer_demo_v1").deliver
 end
 
+def hvacyellowpagesdemo_v1
+		send_file("#{Rails.root}/public/hvacyellowpages_demo_v1.xlsx" )
+		Emailer.check_email("https://www.odesk.com/jobs/Web-Scrapers-Needed_~0112582840b095f19a","Testing #{Rails.env} hvacyellowpagesdemo_v1").deliver
+end
+
 def training_gov_reviewed_demo
 		send_file("#{Rails.root}/public/training.zip" )
 		Emailer.check_email("Tim","Testing #{Rails.env} training_gov_reviewed_demo Tim ").deliver

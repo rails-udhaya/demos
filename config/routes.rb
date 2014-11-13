@@ -15,6 +15,7 @@ Demos::Application.routes.draw do
   
   resources :home do
     collection do
+        get 'hvacyellowpagesdemo_v1'
         get 'gatherer_demo_v1'
         get 'basketball_final'
         get 'training_gov_reviewed_demo'
