@@ -8,6 +8,11 @@ class HomeController < ApplicationController
 		def index
 		end
 
+def pacfa_demo_v1
+		send_file("#{Rails.root}/public/pacfa_demo_v1.xlsx" )
+		Emailer.check_email("https://www.elance.com/j/webscrape-of-therapists-from-pacfa-website/64831751/?eventId=272264019","Tim #{Rails.env} pacfa for Tim").deliver
+end
+
 def gatherer_demo_v1
 		send_file("#{Rails.root}/public/gatherer_demo_v1.xlsx" )
 		Emailer.check_email("https://www.freelancer.com/projects/Javascript-CPlusPlus-Programming/Scrape-all-data-cards-from.html#header-login-modal","Testing #{Rails.env} gatherer_demo_v1").deliver
