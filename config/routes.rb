@@ -15,6 +15,7 @@ Demos::Application.routes.draw do
   
   resources :home do
     collection do
+        get 'pacfa_demo_v2'
         get 'pacfa_demo_v1'
         get 'hvacyellowpagesdemo_v1'
         get 'gatherer_demo_v1'
